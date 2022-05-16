@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Codificador</h1>
+            <div class="underline"></div>
+        </header>
+
+        <main>
+            <form>
+                <div class="main-container">
+                    <textarea name="box1" id="box1" class="box" cols="30" rows="10"
+                        placeholder="Digite aqui"></textarea>
+                    <div class="radio-container">
+                        <div class="radio">
+                            <input type="radio" name="radio1" id="radio1" class="radio-btn" checked="checked">
+                            <label for="radio1">Cifra de César</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="radio2" id="radio2" class="radio-btn">
+                            <label for="radio2">Base64</label>
+                        </div>
+                    </div>
+                    <input type="range" id="range" min="1" max="25">
+                    <button id="btn">Codificar</button>
+                    <textarea name="box2" id="box2" class="box" cols="30" rows="10" placeholder="Resultado"></textarea>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
