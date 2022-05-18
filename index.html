@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codificador</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
@@ -23,16 +24,16 @@
                         placeholder="Digite aqui"></textarea>
                     <div class="radio-container">
                         <div class="radio">
-                            <input type="radio" name="radio1" id="radio1" class="radio-btn" checked="checked">
+                            <input type="radio" name="radio" id="radio1" class="radio-btn" checked="checked">
                             <label for="radio1">Cifra de César</label>
                         </div>
                         <div class="radio">
-                            <input type="radio" name="radio2" id="radio2" class="radio-btn">
+                            <input type="radio" name="radio" id="radio2" class="radio-btn">
                             <label for="radio2">Base64</label>
                         </div>
                     </div>
                     <input type="range" id="range" min="1" max="25">
-                    <button id="btn">Codificar</button>
+                    <button type="button" id="btn">Codificar</button>
                     <textarea name="box2" id="box2" class="box" cols="30" rows="10" placeholder="Resultado"></textarea>
                 </div>
             </form>

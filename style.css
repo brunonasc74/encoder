@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    overflow-y: hidden;
     margin: 0;
     padding: 0;
 }
@@ -13,7 +14,7 @@ body{
 .container {
     width:50%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 header {
@@ -29,7 +30,7 @@ header h1 {
 }
 
 .underline {
-    border-bottom: 4px solid #2eb0e4;
+    border-bottom: 4px solid #e0ab17;
     border-radius: 50px;
     width: 40%;
     margin-top: 1%;
