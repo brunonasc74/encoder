@@ -5,7 +5,18 @@ const radio2 = document.querySelector('#radio2');
 const btn = document.querySelector('#btn');
 const range = document.querySelector('#range');
 
-function ceaserEncrypt() {
+window.addEventListener('DOMContentLoaded', function() {
+    radio1.checked = true;
+    btn.addEventListener('click', () => base64Encode());
+});
+
+window.addEventListener('change', function() {
+    !radio1.checked ?
+    btn.addEventListener('click', () => base64Encode()) :
+    btn.addEventListener('click', () => ceaserEncode());
+});
+
+function ceaserEncode() {
     let txt = box1.value;
     let rangeValue = parseInt(range.value);
     let result = '';
@@ -21,7 +32,6 @@ function ceaserEncrypt() {
             result += String.fromCharCode(asciiValue);
         };
     };
-
     box2.value = result;
 };
 
@@ -29,5 +39,3 @@ function base64Encode() {
     let txt = box1.value;
     box2.value = btoa(txt);
 };
-
-btn.addEventListener('click', base64Encode);
