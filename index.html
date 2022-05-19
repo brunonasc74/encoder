@@ -23,20 +23,31 @@
                     <textarea name="box1" id="box1" class="box" cols="30" rows="10"
                         placeholder="Digite aqui"></textarea>
                     <div class="radio-container">
-                        <div class="radio">
-                            <input type="radio" name="radio" id="radio1" class="radio-btn" value="cc">
-                            <label for="radio1">Cifra de César</label>
+                        <div class="radio-div1">
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="radio3" class="radio-btn">
+                                <label for="radio3">Codificar</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="radio1" id="radio4" class="radio-btn">
+                                <label for="radio4">Decodificar</label>
+                            </div>
                         </div>
-                        <div class="radio">
-                            <input type="radio" name="radio" id="radio2" class="radio-btn" value="b64">
-                            <label for="radio2">Base64</label>
+                        <div class="radio-div2">
+                            <div class="radio">
+                                <input type="radio" name="radio2" id="radio1" class="radio-btn">
+                                <label for="radio1">Cifra de César</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="radio2" id="radio2" class="radio-btn">
+                                <label for="radio2">Base64</label>
+                            </div>
                         </div>
                     </div>
                     <div class="range-container">
                         <div class="range-txt">Número de passos: <span id="range-value">13</span></div>
                         <input type="range" id="range" min="1" max="25">
                     </div>
-                    <!-- <button type="button" id="btn">Codificar</button> -->
                     <textarea name="box2" id="box2" class="box" cols="30" rows="10" placeholder="Resultado"></textarea>
                 </div>
             </form>

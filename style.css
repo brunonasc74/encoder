@@ -47,8 +47,18 @@ main .main-container {
 
 main .radio-container {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    flex-direction: column;
+    width: 40%;
+    border: thin solid black;
+}
+main .radio-div1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+main .radio-div2 {
+    display: flex;
+    justify-content: space-between;
     margin-top: 10px;
     margin-bottom: 5px;
 }
@@ -80,10 +90,3 @@ label {
     padding: 20px;
     border-radius: 10px;
 }
-
-/* #btn {
-    padding: 5px 35px;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 10px;
-} */
