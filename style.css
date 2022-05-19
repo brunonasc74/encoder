@@ -47,20 +47,18 @@ main .main-container {
 
 main .radio-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     width: 40%;
-    border: thin solid black;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 main .radio-div1 {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-direction: column;
 }
 main .radio-div2 {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    flex-direction: column;
 }
 
 .radio-btn {
@@ -89,4 +87,61 @@ label {
     width: 90%;
     padding: 20px;
     border-radius: 10px;
+}
+
+@media(max-width: 1630px) {
+    main .radio-container {
+        width: 50%;
+    }
+    .underline {
+        width: 40%;
+    }
+}
+@media(max-width: 1400px) {
+    main .radio-container {
+        width: 50%;
+    }
+    .range-container {
+        width: 50%;
+    }
+    .container {
+        width: 60%;
+    }
+}
+@media(max-width: 1160px) {
+    main .radio-container {
+        width: 60%;
+    }
+    .container {
+        width: 65%;
+    }
+}
+@media(max-width: 990px) {
+    main .radio-container {
+        width: 70%;
+    }
+    .range-container {
+        width: 60%;
+    }
+    .container {
+        width: 70%;
+    }
+}
+@media(max-width: 770px) {
+    .container {
+        width: 90%;
+    }
+}
+@media(max-width: 570px) {
+    main .radio-container {
+        width: 80%;
+    }
+}
+@media(max-width: 406px) {
+    main .radio-container {
+        width: 70%;
+    }
+    .container {
+        width: 100%;
+    }
 }
