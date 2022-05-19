@@ -2,9 +2,10 @@ const box1 = document.querySelector('#box1');
 const box2 = document.querySelector('#box2');
 const radio1 = document.querySelector('#radio1');
 const radio2 = document.querySelector('#radio2');
-const btn = document.querySelector('#btn');
+// const btn = document.querySelector('#btn');
 const range = document.querySelector('#range');
-const rangeValue = document.querySelector('#range-value')
+const rangeValue = document.querySelector('#range-value');
+const rangeDisplay = document.querySelector('.range-container');
 
 window.addEventListener('DOMContentLoaded', function() {
     radio1.checked = true;
@@ -19,9 +20,11 @@ window.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('change', function() {
     if(!radio1.checked) {
         box1.addEventListener('input', () => base64Encode());
+        rangeDisplay.style.visibility = 'hidden';
     } else {
         box1.addEventListener('input', () => ceaserEncode());
         radio1.addEventListener('click', ceaserEncode);
+        rangeDisplay.style.visibility = 'visible';
     };  
 });
 
