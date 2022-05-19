@@ -11,7 +11,10 @@ const rangeDisplay = document.querySelector('.range-container');
 window.addEventListener('DOMContentLoaded', function() {
     radio1.checked = true, radio3.checked = true;
     box1.addEventListener('input', () => ceaserEncode());
-    radio2.addEventListener('click', () => base64Encode());
+    radio2.addEventListener('click', function() {
+        base64Encode();
+        radio3.checked = true;
+    });
     range.addEventListener('input', function() {
         ceaserEncode();
         rangeValue.textContent = this.value;
@@ -19,6 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('change', function() {
+    console.log('teste');
     if(!radio1.checked) {
         rangeDisplay.style.visibility = 'hidden';
         box1.addEventListener('input', () => base64Encode());
@@ -33,22 +37,18 @@ window.addEventListener('change', function() {
 
     if(!radio3.checked) {
         if (radio1.checked) {
-            console.log('teste');
             box1.addEventListener('input', () => ceaserDecode());
             range.addEventListener('input', () => ceaserDecode());
         } else if (radio2.checked) {
-            console.log('teste222');
             box1.addEventListener('input', () => base64Decode());
         };
     };
 
     if(!radio4.checked) {
         if (radio1.checked) {
-            console.log('teste');
             box1.addEventListener('input', () => ceaserEncode());
             range.addEventListener('input', () => ceaserEncode());
         } else if (radio2.checked) {
-            console.log('teste222');
             box1.addEventListener('input', () => base64Encode());
         };
     }
