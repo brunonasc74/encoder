@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    overflow-y: hidden;
     margin: 0;
     padding: 0;
 }
@@ -61,11 +60,18 @@ main .radio-container {
 label {
     cursor: pointer;
 }
-
-#range {
+.range-container {
     width: 40%;
+    margin-top: 10px;
     margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+#range {
     cursor: pointer;
+}
+.range-txt {
+    text-align: center;
 }
 
 .box {
@@ -75,9 +81,9 @@ label {
     border-radius: 10px;
 }
 
-#btn {
+/* #btn {
     padding: 5px 35px;
     cursor: pointer;
     margin-top: 15px;
     margin-bottom: 10px;
-}
+} */

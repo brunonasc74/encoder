@@ -4,16 +4,25 @@ const radio1 = document.querySelector('#radio1');
 const radio2 = document.querySelector('#radio2');
 const btn = document.querySelector('#btn');
 const range = document.querySelector('#range');
+const rangeValue = document.querySelector('#range-value')
 
 window.addEventListener('DOMContentLoaded', function() {
     radio1.checked = true;
-    btn.addEventListener('click', () => base64Encode());
+    box1.addEventListener('input', () => ceaserEncode());
+    radio2.addEventListener('click', () => base64Encode());
+    range.addEventListener('input', function() {
+        ceaserEncode();
+        rangeValue.textContent = this.value;
+    });
 });
 
 window.addEventListener('change', function() {
-    !radio1.checked ?
-    btn.addEventListener('click', () => base64Encode()) :
-    btn.addEventListener('click', () => ceaserEncode());
+    if(!radio1.checked) {
+        box1.addEventListener('input', () => base64Encode());
+    } else {
+        box1.addEventListener('input', () => ceaserEncode());
+        radio1.addEventListener('click', ceaserEncode);
+    };  
 });
 
 function ceaserEncode() {
